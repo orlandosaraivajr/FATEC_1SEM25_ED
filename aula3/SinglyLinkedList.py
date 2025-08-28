@@ -37,12 +37,12 @@ class SinglyLinkedList:
         node = Node(data)
         count = 1
         while current:
-            if count == 1:        
+            if index == 1:        
                 node.next = current
                 self.head = node
                 print(count)
                 return
-            elif index == index:
+            elif count == index:
                 node.next = current 
                 prev.next = node
                 return
@@ -100,3 +100,12 @@ class SinglyLinkedList:
     def clear(self):
         self.tail = None
         self.head = None
+    
+
+    def __repr__(self):
+        current = self.head
+        s = ''
+        while current:
+            s = s + "   " + str(current.data) 
+            current = current.next
+        return s
