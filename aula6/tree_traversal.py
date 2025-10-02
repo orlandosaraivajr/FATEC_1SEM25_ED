@@ -5,10 +5,11 @@ class Node:
         self.left_child = None 
 
 
-n1 = Node("root node")  
-n2 = Node("left child node") 
-n3 = Node("right child node") 
-n4 = Node("left grandchild node") 
+n1 = Node("pai")   
+n2 = Node("filho esquerda")  
+n3 = Node("filho direita")  
+n4 = Node("neto esquerda")
+
 n1.left_child = n2 
 n1.right_child = n3 
 n2.left_child = n4 
@@ -45,9 +46,11 @@ def postorder(root_node):
         postorder(current.right_child) 
         print(current.data)
 
-
+print("EM ORDEM\n" )
 inorder(n1)
 print("\n" )
+print("PRÉ ORDEM\n" )
 preorder(n1)
 print("\n" )
+print("POS ORDEM\n" )
 postorder(n1)
